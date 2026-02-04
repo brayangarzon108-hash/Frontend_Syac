@@ -1,0 +1,21 @@
+@use '../constants/colors' as *;
+@use '../constants/fonts' as *;
+.p-password,
+.p-inputtext {
+  height: 50px;
+  border-radius: 5px 5px 0px 0px !important;
+  border: none !important;
+  border-bottom: 1px solid $color-blue !important;
+  padding-top: 1.775rem !important;
+  width: 100% !important;
+  font-size: clamp(16px, 0.8vw, 20px) !important;
+  @media (width >= 64rem) and (width <= 80rem) {
+    height: 45px !important;
+  }
+}
+.p-password {
+  padding-top: 0px !important;
+}
+.p-datepicker {
+  width: 100% !important;
+}

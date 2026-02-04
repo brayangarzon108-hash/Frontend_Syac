@@ -1,0 +1,35 @@
+@use '../constants/colors' as *;
+@use '../constants/fonts' as *;
+
+.p-datatable-thead > tr > th {
+  background: $color-blue-dark !important;
+  color: $color-white !important;
+  &:first-child {
+    border-top-left-radius: 30px !important;
+  }
+  &:last-child {
+    border-top-right-radius: 30px !important;
+  }
+}
+
+.history .p-datatable-thead > tr > th {
+  background: $color-blue-dark !important;
+  color: $color-white !important;
+  &:first-child {
+    border-top-left-radius: 0px !important;
+  }
+  &:last-child {
+    border-top-right-radius: 0px !important;
+  }
+}
+.p-datatable-table-container {
+  border-radius: 30px !important;
+}
+.p-datatable-tbody > tr:last-child {
+  border-bottom-right-radius: 30px !important;
+  border-bottom-left-radius: 30px !important;
+}
+
+.history .p-datatable-table-container {
+  border-radius: 0px 0px 30px 30px !important;
+}

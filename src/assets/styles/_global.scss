@@ -1,0 +1,95 @@
+// Import constants
+@use 'constants/colors' as *;
+@use 'constants/fonts' as *;
+
+// Import controls
+//@use'controls/accordion';
+@use 'controls/button' as *;
+@use 'controls/form' as *;
+@use 'controls/input' as *;
+@use 'controls/checkbox' as *;
+@use 'controls/text' as *;
+@use 'controls/label' as *;
+@use 'controls/link' as *;
+// //@use'controls/modal';
+// //@use'controls/radio';
+@use 'controls/select' as *;
+@use 'controls/toast' as *;
+
+// // Import layout
+@use 'layout/accordition' as *;
+@use 'layout/background' as *;
+@use 'layout/card' as *;
+@use 'layout/carousel' as *;
+@use 'layout/dialog' as *;
+@use 'layout/graphic' as *;
+@use 'layout/grid' as *;
+@use 'layout/menu' as *;
+@use 'layout/paginator' as *;
+@use 'layout/stepper' as *;
+@use 'layout/sppiner' as *;
+@use 'layout/table' as *;
+@use 'layout/tabs' as *;
+@use 'layout/tag' as *;
+
+* {
+  font-family: 'Poppins' !important;
+  font-weight: normal !important;
+  scrollbar-color: $color-blue-dark transparent;
+  scrollbar-width: thin;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+/* Asegura que el componente raíz de Angular también ocupe todo el alto */
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.pi {
+  font-family: 'primeicons' !important;
+}
+:root {
+  --p-mask-background: #{$color-background} !important;
+  --p-dialog-background: #{$color-white-alpha90} !important;
+  --p-dialog-header-padding: 0.5rem 1.5rem !important;
+  --p-progressspinner-color-one: #{$color-yellow} !important;
+  --p-floatlabel-in-input-padding-top: 1.575rem !important;
+  --p-menu-item-focus-background: transparent !important;
+  --p-menu-item-focus-color: #{$color-white} !important;
+
+  --p-accordion-header-first-top-border-radius: 13px !important;
+  --p-accordion-content-padding: 0px !important;
+  //--p-toast-border-width: 0px !important;
+  //--p-toast-error-background:#{$color-red} !important;
+  //--p-toast-error-color: #{$color-white} !important;
+  // --p-toast-success-color:#136c2b!important ;
+
+  --p-tag-warn-background: #{$color-orange} !important;
+
+  --p-floatlabel-active-color: #{$color-blue-dark} !important;
+
+  --p-progressbar-background: #{$color-gray-white} !important;
+  --p-progressbar-value-background: #{$color-blue-tab} !important;
+  --p-progressbar-border-radius: 0px !important;
+  --p-progressbar-label-color: #{$color-blue-dark} !important;
+
+  --p-stepper-step-number-active-background: #{$color-yellow} !important;
+  --p-stepper-step-number-active-border-color: #{$color-yellow} !important;
+  --p-stepper-step-number-active-color: #{$color-blue-dark} !important;
+  --p-stepper-step-number-color: #{$color-blue-dark} !important;
+  --p-stepper-step-title-active-color: #{$color-blue-dark} !important;
+  --p-stepper-separator-active-background: #{$color-blue-dark} !important;
+
+  --p-tooltip-color: #{$color-blue-dark} !important;
+  --p-tooltip-background: #{$color-blue} !important;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}

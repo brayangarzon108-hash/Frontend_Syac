@@ -1,0 +1,13 @@
+@use '../constants/colors' as *;
+@use '../constants/fonts' as *;
+
+.redirectForgot {
+  color: $color-blue-dark;
+  font-family: 'Poppins-Medium' !important;
+  &:hover {
+    font-family: 'Poppins-Bold' !important;
+    border-radius: 29px;
+    background: #0a87ff29;
+    padding: 5px 8px;
+  }
+}

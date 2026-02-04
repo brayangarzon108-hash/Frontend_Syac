@@ -1,0 +1,60 @@
+@use '../constants/colors' as *;
+@use '../constants/fonts' as *;
+
+.card {
+  @apply rounded-4xl;
+  background-color: $color-white-alpha90;
+  box-shadow: 0px 3px 12px #00000029;
+}
+
+.card-login-mobile {
+  @apply rounded-4xl;
+  background-color: $color-white-alpha80;
+  box-shadow: 0px 3px 12px #00000029;
+}
+
+.card-affiliation {
+  box-shadow: 0px 3px 12px #00000029;
+}
+
+.card-assistance {
+  background-color: $color-gray-white !important;
+}
+
+.header-affiliations {
+  background-color: #acbee0 !important;
+}
+
+.header {
+  &-affiliations {
+    background-color: #acbee0;
+  }
+  &-detail {
+    background-color: $color-blue-dark;
+  }
+}
+
+.certification-card {
+  @apply flex flex-row items-center justify-center space-x-2 rounded-[33px]  lg:min-w-xs lg:max-w-xs xl:min-w-sm xl:max-w-sm min-h-[104px] max-h-[200px]  cursor-pointer;
+  &-beneficiaries {
+    background-color: $color-blue-dark;
+    color: $color-white;
+    &:hover {
+      background-color: $color-blue-dark-hover;
+    }
+  }
+  &-insurance {
+    background-color: $color-blue-light;
+    color: $color-white;
+    &:hover {
+      background-color: $color-blue-light-hover;
+    }
+  }
+  &-expenses {
+    background-color: $color-yellow-dark;
+    color: $color-blue-dark;
+    &:hover {
+      background-color: $color-yellow-dark-hover;
+    }
+  }
+}

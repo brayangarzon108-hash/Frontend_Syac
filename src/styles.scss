@@ -1,0 +1,11 @@
+/* Todas las directivas @use deben ir primero */
+@use './assets/styles/global' as *;
+@use 'tailwindcss' as *;
+
+/* Tailwind se importa con @tailwind, no con @use */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Archivos CSS normales se importan con @import */
+@import 'primeicons/primeicons.css';

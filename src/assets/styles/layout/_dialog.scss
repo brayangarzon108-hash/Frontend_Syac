@@ -1,0 +1,26 @@
+@use '../constants/colors' as *;
+@use '../constants/fonts' as *;
+
+.p-dialog {
+  background: $color-white-alpha90 !important;
+}
+.update-data .p-dialog {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+.p-overlay-mask {
+  background: $color-background !important;
+}
+.services-funeral {
+  .p-overlay-mask {
+    background: #f84747b0 !important;
+  }
+  .p-dialog {
+    border-radius: 32px !important;
+    border: none !important;
+    .p-dialog-header {
+      padding: 0 !important;
+    }
+  }
+}
