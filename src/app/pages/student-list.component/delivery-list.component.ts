@@ -9,11 +9,13 @@ import { SelectModule } from 'primeng/select';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { StudentService } from '../../core/services/student.service';
+import { DeliveryService } from '../../core/services/delivery.service';
 import {
   Student,
   CreateStudent,
   CatalogFilter,
   ResponseStudent,
+  Pedido,
 } from '../../core/enum/models/student.model';
 import { ApiResponse } from '../../core/enum/response/api-response.model';
 import { TooltipModule } from 'primeng/tooltip';
@@ -44,10 +46,10 @@ import { RoutesApp } from '../../core/enum/routes/routes.enum';
     ModalStudentListComponent,
     SubjectListComponent,
   ],
-  templateUrl: './student-list.component.html',
-  styleUrl: './student-list.component.scss',
+  templateUrl: './delivery-list.component.html',
+  styleUrl: './delivery-list.component.scss',
 })
-export class StudentListComponent implements OnInit {
+export class DeliveryListComponent implements OnInit {
   typeForm: string = '';
   first: number = 0;
   rows: number = 10;
@@ -60,12 +62,13 @@ export class StudentListComponent implements OnInit {
   totalRecords: number = 0;
   dynamicCatalogId: number = 0;
   sizeWindow: string = '';
-  formsList: Student[] = [];
+  formsList: Pedido[] = [];
   private cdr: ChangeDetectorRef = inject(ChangeDetectorRef);
   constructor(
     private router: Router,
     private fb: FormBuilder,
     private dynamicService: StudentService,
+    private deliveryService: DeliveryService,
   ) {
     this.filterCatalog = this.fb.group({
       nameCatalog: [''],
@@ -130,11 +133,13 @@ export class StudentListComponent implements OnInit {
       page: this.first,
       pagesize: this.rows,
     };
-    this.dynamicService.getStudents(data.page, data.pagesize, data.nameCatalog).subscribe({
-      next: (response: ApiResponse<ResponseStudent>) => {
-        if (response.status === StatusCode.OK) {
-          this.formsList = response.data.infomationProcess;
-          this.totalRecords = response.data.countRegister;
+
+    this.deliveryService.getDelivery(data.page, data.pagesize, data.nameCatalog).subscribe({
+      next: (response: Pedido[]) => {
+        debugger;
+        if (response.length > 0) {
+          this.formsList = response;
+          this.totalRecords = response.length;
           this.handleLoading = false;
           this.cdr.detectChanges();
         } else {

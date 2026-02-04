@@ -9,4 +9,5 @@ export enum EndPointRoute {
   DELETE_STUDENTS_SUBJECT = 'StudentSubject/DeleteAlumn',
   UPSERT_STUDENTS_SUBJECTS = 'StudentSubject/InsertAlumnSubject',
   ALL_STUDENTS_SUBJECT_NAME = 'Classmate/GetClassmates',
+  ALL_PRODUCTS = 'Pedidos/Get',
 }

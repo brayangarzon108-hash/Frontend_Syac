@@ -12,7 +12,7 @@ import { ToastModule } from 'primeng/toast';
   styleUrl: './app.scss',
 })
 export class App implements OnInit, OnDestroy {
-  title = 'Student';
+  title = 'Pedidos';
 
   constructor(
     private router: Router,

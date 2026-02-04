@@ -1,16 +1,16 @@
 import { Routes } from '@angular/router';
 import { RoutesApp } from './core/enum/routes/routes.enum';
-import { StudentListComponent } from './pages/student-list.component/student-list.component';
+import { DeliveryListComponent } from './pages/student-list.component/delivery-list.component';
 import { SubjectListComponent } from './pages/student-list.component/subject-list/subject-list.component';
 
 export const routes: Routes = [
   {
     path: RoutesApp.STUDENTLIST,
-    component: StudentListComponent,
+    component: DeliveryListComponent,
   },
   {
     path: RoutesApp.SUBJECTLIST,
     component: SubjectListComponent,
   },
-  { path: '', component: StudentListComponent },
+  { path: '', component: DeliveryListComponent },
 ];

@@ -1,12 +1,12 @@
 //const packageJson = require('../../package.json');
-const HOST = 'https://localhost:44380/api';
+const HOST = 'https://localhost:7147/api';
 const enviromentsName = "Ambiente de Pruebas"
 export const enviroments = {
   msalConfiguration: {
     auth: {
       clientId: '',
       authority: '',
-      redirectUri: 'http://localhost:4200/',
+      redirectUri: 'https://localhost:7147/',
     },
     system: {
       allowNativeBroker: false, // Disables native brokering support

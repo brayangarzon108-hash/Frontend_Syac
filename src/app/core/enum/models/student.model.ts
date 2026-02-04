@@ -67,3 +67,13 @@ export interface CatalogFilter {
   page: number;
   pagesize: number;
 }
+
+
+export interface Pedido {
+  ordenPedidoId: number;
+  clienteId: number;
+  direccionEntrega: string;
+  valorTotal: number;
+  estado: string;
+  prioridad: string;
+}
